@@ -1,4 +1,4 @@
-package com.didispace;
+package com.hys.config;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.didispace.security.UserDetailServiceImpl;
+import com.hys.security.UserDetailServiceImpl;
 
 @Configuration
 @EnableWebSecurity
@@ -18,10 +18,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
+        http.csrf().disable()
             .authorizeRequests()
                 .antMatchers("/", "/home","/").permitAll()
-                .antMatchers("/users/**").permitAll()
+                .antMatchers("/na/**").permitAll()
                 .antMatchers("/rest/**").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()

@@ -1,12 +1,12 @@
-package com.didispace.dao;
+package com.hys.dao;
 
 import org.springframework.stereotype.Repository;
 
-import com.didispace.common.BaseDao;
-import com.didispace.entity.User;
+import com.hys.common.BaseDao;
+import com.hys.entity.User;
 
 @Repository
-public class UserDao extends BaseDao<User> {
+public class UserDao extends BaseDao<User>{
 
 	@Override
 	public Class<User> getEntityClass() {

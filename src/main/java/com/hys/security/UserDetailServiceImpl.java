@@ -1,4 +1,4 @@
-package com.didispace.security;
+package com.hys.security;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,9 +13,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
 
-import com.didispace.dao.UserRoleDao;
-import com.didispace.entity.UserRole;
-import com.didispace.service.UserService;
+import com.hys.dao.UserRoleDao;
+import com.hys.service.UserService;
 
 @Repository
 public class UserDetailServiceImpl implements UserDetailsService {
@@ -28,10 +27,10 @@ public class UserDetailServiceImpl implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
-		com.didispace.entity.User cu = null;
+		com.hys.entity.User cu = null;
 		try {
 			 //cu = userService.getUserByName(username);
-			cu = new com.didispace.entity.User();
+			cu = new com.hys.entity.User();
 			cu.setUsername("admin");
 			cu.setPassword("admin");
 			cu.setId("1");

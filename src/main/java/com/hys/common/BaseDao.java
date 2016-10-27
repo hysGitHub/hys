@@ -1,4 +1,4 @@
-package com.didispace.common;
+package com.hys.common;
 
 import java.util.HashMap;
 import java.util.List;

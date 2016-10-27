@@ -1,4 +1,4 @@
-package com.didispace;
+package com.hys.config;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.jpa.HibernateEntityManagerFactory;
@@ -12,16 +12,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Import({ WebSecurityConfig.class })
 public class AppConfig {
 
-	
-	/*@Bean(name = "dataSource")
-	public DriverManagerDataSource dataSource() {
-	    DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
-	    driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-	    driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/boot");
-	    driverManagerDataSource.setUsername("root");
-	    driverManagerDataSource.setPassword("root");
-	    return driverManagerDataSource;
-	}*/
 	@Bean(name = "sessionFactory")  
 	public SessionFactory sessionFactory(HibernateEntityManagerFactory hemf){  
 	    return hemf.getSessionFactory();  

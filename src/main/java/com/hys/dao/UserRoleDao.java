@@ -1,9 +1,9 @@
-package com.didispace.dao;
+package com.hys.dao;
 
 import java.util.List;
 import org.springframework.stereotype.Repository;
-import com.didispace.common.BaseDao;
-import com.didispace.entity.UserRole;
+import com.hys.common.BaseDao;
+import com.hys.entity.UserRole;
 
 @Repository
 public class UserRoleDao extends BaseDao<UserRole>{
